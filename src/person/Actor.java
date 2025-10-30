@@ -1,3 +1,5 @@
+package person;
+
 import java.util.Objects;
 
 public class Actor extends Person {
@@ -16,6 +18,7 @@ public class Actor extends Person {
                 height == actor.height;
     }
 
+
     @Override
     public int hashCode() {
         return Objects.hash(name, surname, height);
@@ -23,7 +26,7 @@ public class Actor extends Person {
 
     @Override
     public String toString() {
-        return "Actor{" +
+        return "Person.Actor{" +
                 "name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
                 ", gender=" + gender +

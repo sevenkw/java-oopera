@@ -1,3 +1,6 @@
+import person.*;
+import show.*;
+
 import java.util.ArrayList;
 
 public class Theatre {
@@ -10,15 +13,21 @@ public class Theatre {
         Director d1 = new Director("Роберт", "Карсен", Gender.MALE, 100);
         Director d2 = new Director("Софи", "Хантер", Gender.FEMALE, 20);
 
+        Person choreographer = new Person("Игорь", "Моисеев", Gender.MALE);
+
+        Person musicAuthor = new Person("Петр", "Чайковский", Gender.MALE);
+        Person musicAuthor2 = new Person("Джузеппо", "Верди", Gender.MALE);
+
         ArrayList<Actor> showActors = new ArrayList<>();
         ArrayList<Actor> balletActors = new ArrayList<>();
         ArrayList<Actor> operaActors = new ArrayList<>();
 
         Show show = new Show("Обычный спектакль", 120, d1, showActors);
+
         Ballet ballet = new Ballet("Лебединое озеро", 150, d2, balletActors,
-                "Чайковский", "Принц влюбляется в прекрасную Одит, заколдованную злым волшебником.", "Хореограф1");
+                musicAuthor, "Принц влюбляется в прекрасную Одит, заколдованную злым волшебником.", choreographer);
         Opera opera = new Opera("Травиата", 130, d1, operaActors,
-                "Верди", "Жить, желая лишь дотянуть до завтрашнего дня, недопустимо", 20);
+                musicAuthor2, "Жить, желая лишь дотянуть до завтрашнего дня, недопустимо", 20);
 
 
         show.addActor(a1);

@@ -1,3 +1,5 @@
+package person;
+
 public class Person {
     protected String name;
     protected String surname;
@@ -10,10 +12,13 @@ public class Person {
         this.gender = gender;
     }
 
+    public String getSurname() {
+        return surname;
+    }
 
     @Override
     public String toString() {
-        return "Person{" +
+        return "Person.Person{" +
                 "name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
                 ", gender=" + gender +
